@@ -1,0 +1,641 @@
+{
+  "info": {
+    "_postman_id": "9c09af9d-6701-4af8-b1c0-b7fddee1117f",
+    "name": "Finance App",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50989675",
+    "_collection_link": "https://go.postman.co/collection/50989675-9c09af9d-6701-4af8-b1c0-b7fddee1117f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Login Auth jwt",
+      "item": [
+        {
+          "name": "login jwt",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080//auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "get all users",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaWNAbWFpbC5jb20iLCJpYXQiOjE3NzUzODY5MzYsImV4cCI6MTc3NTQ3MzMzNn0.BnrSvE6sClo2JGTUMdLiN0tBRVD6tJ6LJaLDO9TKtos",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"ehtisham\",\r\n  \"email\": \"ehtisham@mail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"EMPLOYEE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/auth/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "auth",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create new user",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaWNAbWFpbC5jb20iLCJpYXQiOjE3NzUzODY5MzYsImV4cCI6MTc3NTQ3MzMzNn0.BnrSvE6sClo2JGTUMdLiN0tBRVD6tJ6LJaLDO9TKtos",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"ehtisham\",\r\n  \"email\": \"ehtisham@mail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"EMPLOYEE\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/auth/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "auth",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User by ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaWNAbWFpbC5jb20iLCJpYXQiOjE3NzUzODY5MzYsImV4cCI6MTc3NTQ3MzMzNn0.BnrSvE6sClo2JGTUMdLiN0tBRVD6tJ6LJaLDO9TKtos",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"ehtisham\",\r\n  \"email\": \"ehtisham@mail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"EMPLOYEE\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/auth/users/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "auth",
+                "users",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaWNAbWFpbC5jb20iLCJpYXQiOjE3NzUzODY5MzYsImV4cCI6MTc3NTQ3MzMzNn0.BnrSvE6sClo2JGTUMdLiN0tBRVD6tJ6LJaLDO9TKtos",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"ehtisham\",\r\n  \"email\": \"ehtisham@mail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"EMPLOYEE\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/auth/users/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "auth",
+                "users",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Toggle User Status",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaWNAbWFpbC5jb20iLCJpYXQiOjE3NzUzODY5MzYsImV4cCI6MTc3NTQ3MzMzNn0.BnrSvE6sClo2JGTUMdLiN0tBRVD6tJ6LJaLDO9TKtos",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"ehtisham\",\r\n  \"email\": \"ehtisham@mail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"EMPLOYEE\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/auth/users/1/toggle-status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "auth",
+                "users",
+                "1",
+                "toggle-status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/auth/users/1/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "auth",
+                "users",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Financial Records",
+      "item": [
+        {
+          "name": "update record",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/records/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "records",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "post record",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlaHRpc2hhbUBtYWlsLmNvbSIsImlhdCI6MTc3NTM4NTMzNSwiZXhwIjoxNzc1NDcxNzM1fQ.n8A5VmEmDQgLDfPL4tTPloT8-BRqYn7H5701FPKQgUg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"amount\": 5000,\r\n  \"type\": \"INCOME\",\r\n  \"category\": \"Return\",\r\n  \"date\": \"2026-04-03\",\r\n  \"description\": \"Order Return Refund\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/records",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "records"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all records",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYnRlc2FtQG1haWwuY29tIiwiaWF0IjoxNzc1Mzg0NDM4LCJleHAiOjE3NzU0NzA4Mzh9.5w8cmzAxQXN_rcM0XLA8M7lcj06JWe_B4Sv-vfWx31A",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/records",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "records"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete record",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/records/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "records",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Record Filter",
+      "item": [
+        {
+          "name": "by type",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYnRlc2FtQG1haWwuY29tIiwiaWF0IjoxNzc1Mzg0NDM4LCJleHAiOjE3NzU0NzA4Mzh9.5w8cmzAxQXN_rcM0XLA8M7lcj06JWe_B4Sv-vfWx31A",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/records/filter/type?type=INCOME&page=0&size=5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "records",
+                "filter",
+                "type"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "INCOME"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "by category",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/records/filter/type?category=salary&page=0&size=5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "records",
+                "filter",
+                "type"
+              ],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "salary"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "by date",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/records/filter/date?start=2026-04-01&end=2026-04-30&page=0&size=5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "records",
+                "filter",
+                "date"
+              ],
+              "query": [
+                {
+                  "key": "start",
+                  "value": "2026-04-01"
+                },
+                {
+                  "key": "end",
+                  "value": "2026-04-30"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Record Dashboard",
+      "item": [
+        {
+          "name": "recent transactions",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "ric@mail.com",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "123456",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/records/recent?limit=5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "records",
+                "recent"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "transactions summary",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/records/summary",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "records",
+                "summary"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "transaction summary by category",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/records/summary/category",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "records",
+                "summary",
+                "category"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "transaction summary monthly",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/records/summary/monthly",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "records",
+                "summary",
+                "monthly"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "transaction summary weekly",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/records/summary/weekly",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "records",
+                "summary",
+                "weekly"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
